@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Événements — BiblioHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+        <span class="logo-icon">📚</span>
+        Biblio<span>Hub</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <h1>Événements & Animations</h1>
+    <div class="gold-line"></div>
+    <p>Rencontres, ateliers et conférences — rejoignez notre communauté de lecteurs.</p>
+  </header>
+
+  <!-- ── EVENTS SECTION ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2>Prochains événements</h2>
+        <div class="gold-line"></div>
+        <p>Des rendez-vous culturels et intellectuels pour tous les âges et tous les goûts.</p>
+      </div>
+
+      <div class="events-grid">
+
+        <!-- Event 1 — Book Club -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">15</div>
+              <div class="month">Mai</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Club de Lecture — Romans Contemporains</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>Ce mois-ci, notre club de lecture explore les grands romans contemporains francophones. Rejoignez-nous pour une discussion animée autour de « La Carte et le Territoire » de Michel Houellebecq. Tous les niveaux de lecture sont bienvenus.</p>
+            <div class="event-meta">
+              <span>🕑 18h30 – 20h30</span>
+              <span>📍 Salle de conférence A – Rez-de-chaussée</span>
+              <span>🎟️ Entrée libre – Inscription recommandée</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 2 — Author Conference -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">22</div>
+              <div class="month">Mai</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Conférence : Camille Laurens en conversation</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>L'autrice Camille Laurens nous fait l'honneur d'une rencontre exceptionnelle autour de son dernier roman et de son parcours littéraire. Séance de dédicace prévue à l'issue de la conférence. Places limitées.</p>
+            <div class="event-meta">
+              <span>🕕 17h00 – 19h00</span>
+              <span>📍 Grand Auditorium – 1er étage</span>
+              <span>🎟️ Gratuit sur inscription obligatoire</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 3 — Children Workshop -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">29</div>
+              <div class="month">Mai</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Atelier Contes & Créativité (6–10 ans)</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>Un après-midi magique pour les jeunes lecteurs ! Écoute de contes, jeux autour des livres et atelier de création d'un mini-album illustré à emporter. Encadré par notre animatrice jeunesse. Matériel fourni.</p>
+            <div class="event-meta">
+              <span>🕒 15h00 – 17h00</span>
+              <span>📍 Espace Jeunesse – Rez-de-chaussée</span>
+              <span>🎟️ Gratuit – Inscription requise pour les parents</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 4 — Science Workshop -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">05</div>
+              <div class="month">Juin</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Atelier Zotero : Gérer ses références bibliographiques</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>Formation pratique au logiciel Zotero pour étudiants et chercheurs. Apprenez à collecter, organiser et citer vos sources bibliographiques efficacement. Apportez votre ordinateur portable. Niveau débutant bienvenu.</p>
+            <div class="event-meta">
+              <span>🕙 10h00 – 12h30</span>
+              <span>📍 Salle Informatique – 2ème étage</span>
+              <span>🎟️ Gratuit – 15 places maximum</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 5 — Philosophy Night -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">12</div>
+              <div class="month">Juin</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Café Philo : « L'IA est-elle vraiment intelligente ? »</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>Débat philosophique ouvert à tous autour de la question de l'intelligence artificielle et de ses implications éthiques et sociales. Animé par un philosophe invité de l'Université Paris-Sorbonne. Venez avec vos questions !</p>
+            <div class="event-meta">
+              <span>🕗 19h00 – 21h00</span>
+              <span>📍 Terrasse bibliothèque – 3ème étage</span>
+              <span>🎟️ Entrée libre</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Event 6 — Book Fair -->
+        <article class="event-card">
+          <div class="event-header">
+            <div class="event-date">
+              <div class="day">20</div>
+              <div class="month">Juin</div>
+            </div>
+            <div class="event-title-block">
+              <h3>Journée Portes Ouvertes & Troc de Livres</h3>
+            </div>
+          </div>
+          <div class="event-body">
+            <p>Grande journée festive pour découvrir BiblioHub sous toutes ses facettes ! Visite guidée, démonstrations de services, ateliers express, et bourse d'échanges de livres. Apportez vos livres d'occasion pour les troquer avec d'autres lecteurs.</p>
+            <div class="event-meta">
+              <span>🕙 10h00 – 18h00</span>
+              <span>📍 Bibliothèque entière + Parvis extérieur</span>
+              <span>🎟️ Gratuit – Ouvert à tous</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /events-grid -->
+
+      <!-- CTA -->
+      <div style="text-align:center; margin-top:50px; padding:40px; background:var(--off-white); border-radius:var(--radius);">
+        <h3 style="font-size:1.5rem; color:var(--blue); margin-bottom:10px;">Vous souhaitez proposer un événement ?</h3>
+        <p style="color:var(--text-light); margin-bottom:24px;">Associations, artistes, chercheurs — nous sommes ouverts aux collaborations culturelles.</p>
+        <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="icon">📍</span><span>JXXM+JRM، شارع مولاي عبد الله، مراكش 40000</span></li>
+            <li><span class="icon">📞</span><span>+212 (0)5 24 43 46 49</span></li>
+            <li><span class="icon">✉️</span><span>contact@bibliohub.fr</span></li>
+            <li><span class="icon">🕐</span><span>Lun–Sam : 8h–19h</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

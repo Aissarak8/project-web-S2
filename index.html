@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiblioHub — Votre Bibliothèque Moderne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR (shared across all pages)
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+        <span class="logo-icon">📚</span>
+        Biblio<span>Hub</span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+  ══════════════════════════════════════════ -->
+  <section class="hero" aria-label="Section principale">
+    <div class="hero-inner">
+
+      <!-- Text content -->
+      <div class="hero-content">
+        <div class="hero-tag">✨ Bibliothèque ouverte au public</div>
+        <h1>Explorez un monde de <span>connaissances</span> sans frontières</h1>
+        <p>BiblioHub vous offre l'accès à plus de 15 000 ouvrages, ressources numériques et espaces de travail collaboratifs au cœur de la ville.</p>
+        <div class="hero-cta">
+          <a href="catalogue.html" class="btn btn-primary">Parcourir le catalogue</a>
+          <a href="services.html" class="btn btn-outline">Nos services</a>
+        </div>
+      </div>
+
+      <!-- Floating book emoji illustration -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="book-float">📖</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       STATS SECTION — count-up on scroll
+  ══════════════════════════════════════════ -->
+  <section class="stats section" aria-label="Chiffres clés">
+    <div class="container">
+      <div class="section-header">
+        <h2>BiblioHub en chiffres</h2>
+        <div class="gold-line"></div>
+        <p>Une bibliothèque en constante évolution au service de sa communauté.</p>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <div class="stat-icon">📚</div>
+          <!-- data-count triggers count-up animation in JS -->
+          <div class="stat-number"
+               data-count="15000"
+               data-suffix="+">0</div>
+          <div class="stat-label">Livres disponibles</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">👥</div>
+          <div class="stat-number"
+               data-count="3200"
+               data-suffix="+">0</div>
+          <div class="stat-label">Membres inscrits</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">💻</div>
+          <div class="stat-number"
+               data-count="500"
+               data-suffix="+">0</div>
+          <div class="stat-label">Ressources numériques</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🏛️</div>
+          <div class="stat-number"
+               data-count="25"
+               data-suffix=" ans">0</div>
+          <div class="stat-label">D'expérience</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FEATURED BOOKS SLIDER
+  ══════════════════════════════════════════ -->
+  <section class="slider-section section" aria-label="Livres à la une">
+    <div class="container">
+      <div class="section-header">
+        <h2>Livres à la une</h2>
+        <div class="gold-line"></div>
+        <p>Notre sélection de coups de cœur du moment.</p>
+      </div>
+
+      <div class="slider-wrapper">
+
+        <!-- Prev button -->
+        <button class="slider-btn prev" id="sliderPrev" aria-label="Slide précédente">&#8592;</button>
+
+        <div class="slider" role="region" aria-label="Carrousel de livres">
+          <div class="slider-track" id="sliderTrack">
+
+            <!-- Slide 1 -->
+            <div class="slide">
+              <div class="slide-emoji" aria-hidden="true">📗</div>
+              <div class="slide-content">
+                <div class="slide-category">Littérature classique</div>
+                <h3>Les Misérables</h3>
+                <div class="slide-author">Victor Hugo</div>
+                <p class="slide-desc">Une épopée humaniste à travers la France du XIXe siècle, suivant le destin de Jean Valjean et la lutte éternelle entre justice et compassion. Un chef-d'œuvre intemporel de la littérature mondiale.</p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <div class="slide-emoji" aria-hidden="true">🔬</div>
+              <div class="slide-content">
+                <div class="slide-category">Sciences</div>
+                <h3>Une brève histoire du temps</h3>
+                <div class="slide-author">Stephen Hawking</div>
+                <p class="slide-desc">De la grande explosion aux trous noirs, Hawking explore les mystères de l'univers avec une clarté remarquable. Un voyage scientifique fascinant accessible à tous les lecteurs curieux.</p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <div class="slide-emoji" aria-hidden="true">🧠</div>
+              <div class="slide-content">
+                <div class="slide-category">Philosophie</div>
+                <h3>Le Monde de Sophie</h3>
+                <div class="slide-author">Jostein Gaarder</div>
+                <p class="slide-desc">À travers les aventures de Sophie, ce roman initiatique retrace l'histoire de la philosophie occidentale de manière vivante et accessible. Un voyage intellectuel exceptionnel.</p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <div class="slide-emoji" aria-hidden="true">💻</div>
+              <div class="slide-content">
+                <div class="slide-category">Informatique</div>
+                <h3>Clean Code</h3>
+                <div class="slide-author">Robert C. Martin</div>
+                <p class="slide-desc">Un guide indispensable pour tout développeur souhaitant écrire du code propre, lisible et maintenable. Les principes exposés transforment définitivement votre façon de programmer.</p>
+              </div>
+            </div>
+
+          </div><!-- /slider-track -->
+        </div><!-- /slider -->
+
+        <!-- Next button -->
+        <button class="slider-btn next" id="sliderNext" aria-label="Slide suivante">&#8594;</button>
+
+      </div><!-- /slider-wrapper -->
+
+      <!-- Dot indicators -->
+      <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Navigation des slides"></div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       NEW ARRIVALS — book cards grid
+  ══════════════════════════════════════════ -->
+  <section class="arrivals section" aria-label="Nouvelles acquisitions">
+    <div class="container">
+      <div class="section-header">
+        <h2>Nouvelles acquisitions</h2>
+        <div class="gold-line"></div>
+        <p>Découvrez les derniers ouvrages intégrés à notre collection.</p>
+      </div>
+
+      <div class="books-grid">
+
+        <!-- Book card 1 -->
+        <article class="book-card">
+          <div class="book-cover" aria-hidden="true">🌍</div>
+          <div class="book-body">
+            <div class="book-category">Histoire</div>
+            <h3 class="book-title">Sapiens : Une brève histoire de l'humanité</h3>
+            <p class="book-author">Yuval Noah Harari</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book card 2 -->
+        <article class="book-card">
+          <div class="book-cover" aria-hidden="true">🤖</div>
+          <div class="book-body">
+            <div class="book-category">Informatique</div>
+            <h3 class="book-title">Intelligence Artificielle : Une approche moderne</h3>
+            <p class="book-author">Russell & Norvig</p>
+            <div class="book-footer">
+              <span class="badge badge-reserved">Réservé</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book card 3 -->
+        <article class="book-card">
+          <div class="book-cover" aria-hidden="true">🌹</div>
+          <div class="book-body">
+            <div class="book-category">Littérature</div>
+            <h3 class="book-title">Le Nom de la Rose</h3>
+            <p class="book-author">Umberto Eco</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book card 4 -->
+        <article class="book-card">
+          <div class="book-cover" aria-hidden="true">⚛️</div>
+          <div class="book-body">
+            <div class="book-category">Sciences</div>
+            <h3 class="book-title">La Mécanique Quantique</h3>
+            <p class="book-author">Michel Le Bellac</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /books-grid -->
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="catalogue.html" class="btn btn-primary">Voir tout le catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER (shared across all pages)
+  ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Column 1: Brand -->
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+
+        <!-- Column 2: Quick links -->
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact info -->
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <span class="icon">📍</span>
+              <span>12 Rue du Savoir, 75005 Paris, France</span>
+            </li>
+            <li>
+              <span class="icon">📞</span>
+              <span>+33 (0)1 23 45 67 89</span>
+            </li>
+            <li>
+              <span class="icon">✉️</span>
+              <span>contact@bibliohub.fr</span>
+            </li>
+            <li>
+              <span class="icon">🕐</span>
+              <span>Lun–Sam : 9h–20h</span>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-grid -->
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés. Fait avec ❤️ pour les amoureux des livres.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

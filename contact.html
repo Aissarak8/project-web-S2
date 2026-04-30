@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — BiblioHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+        <span class="logo-icon">📚</span>
+        Biblio<span>Hub</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <h1>Contactez-nous</h1>
+    <div class="gold-line"></div>
+    <p>Une question, une suggestion ? Notre équipe est là pour vous aider.</p>
+  </header>
+
+  <!-- ── CONTACT SECTION ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="contact-layout">
+
+        <!-- ── Left column: contact information ── -->
+        <div class="contact-info-card">
+          <h2>Nous trouver</h2>
+          <p>Rendez-nous visite ou écrivez-nous — nous répondons généralement dans les 24 heures ouvrées.</p>
+
+          <!-- Address -->
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">📍</div>
+            <div>
+              <h4>Adresse</h4>
+              <p>شارع مولاي عبد الله<br>مراكش 40000</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">📞</div>
+            <div>
+              <h4>Téléphone</h4>
+              <p>+212 (0)5 24 43 46 49</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-item">
+            <div class="ci-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h4>E-mail</h4>
+              <p>contact@fssm.ma<br>bibliofssm@uca.ac.ma</p>
+            </div>
+          </div>
+
+          <!-- Opening hours summary -->
+          <div class="contact-hours">
+            <h4>Horaires d'ouverture</h4>
+            <p>🟢 Lundi – Vendredi : 8h00 – 19h00</p>
+            <p>🟢 Samedi : 8h00 – 12h00</p>
+            <p>🔴 Dimanche & Jours fériés : Fermé</p>
+          </div>
+        </div>
+
+        <!-- ── Right column: contact form ── -->
+        <div class="contact-form-card">
+          <h2>Envoyer un message</h2>
+          <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les meilleurs délais.</p>
+
+          <!-- Contact form — validated in main.js -->
+          <form id="contactForm" novalidate>
+
+            <!-- Name row: Nom + Prénom -->
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="nom">Nom <span>*</span></label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Votre nom"
+                  data-required="true"
+                  autocomplete="family-name"
+                />
+                <span class="field-error" id="nomError" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="prenom">Prénom <span>*</span></label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  placeholder="Votre prénom"
+                  data-required="true"
+                  autocomplete="given-name"
+                />
+                <span class="field-error" id="prenomError" role="alert"></span>
+              </div>
+
+            </div><!-- /form-row -->
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Adresse e-mail <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="votre@uca.ac.ma"
+                data-required="true"
+                autocomplete="email"
+              />
+              <span class="field-error" id="emailError" role="alert"></span>
+            </div>
+
+            <!-- Subject select -->
+            <div class="form-group">
+              <label for="sujet">Sujet <span>*</span></label>
+              <select id="sujet" name="sujet" data-required="true">
+                <option value="">— Choisissez un sujet —</option>
+                <option value="adhesion">Adhésion / Inscription</option>
+                <option value="catalogue">Question sur le catalogue</option>
+                <option value="reservation">Réservation d'ouvrage</option>
+                <option value="salle">Réservation de salle</option>
+                <option value="evenement">Événements et animations</option>
+                <option value="suggestion">Suggestion d'acquisition</option>
+                <option value="reclamation">Réclamation</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="field-error" id="sujetError" role="alert"></span>
+            </div>
+
+            <!-- Message textarea — min 30 characters -->
+            <div class="form-group">
+              <label for="message">Message <span>*</span></label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Décrivez votre demande en détail…"
+                data-required="true"
+                data-minlength="30"
+                rows="5"
+              ></textarea>
+              <span class="field-error" id="messageError" role="alert"></span>
+            </div>
+
+            <!-- Submit button -->
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; display:flex;">
+                Envoyer le message ✉️
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Success message (shown by JS after valid submission) -->
+          <div class="success-message" id="successMessage" role="status" aria-live="polite">
+            ✅ Merci ! Votre message a bien été envoyé. Nous vous répondrons dans les 24 heures ouvrées.
+          </div>
+
+        </div><!-- /contact-form-card -->
+      </div><!-- /contact-layout -->
+
+    </div>
+  </section>
+
+  <!-- ── FAQ teaser ── -->
+  <section class="section" style="background:var(--off-white);">
+    <div class="container" style="text-align:center; max-width:700px;">
+      <h2 style="font-size:1.8rem; color:var(--blue); margin-bottom:12px;">Questions fréquentes</h2>
+      <div class="gold-line" style="margin:0 auto 20px;"></div>
+      <p style="color:var(--text-light); margin-bottom:32px;">Consultez notre FAQ avant d'envoyer votre message — votre réponse s'y trouve peut-être déjà.</p>
+
+      <div style="display:grid; gap:14px; text-align:left;">
+
+        <details style="background:var(--white); border-radius:8px; padding:18px 22px; border:1px solid var(--border);">
+          <summary style="font-weight:700; color:var(--blue); cursor:pointer; list-style:none; display:flex; justify-content:space-between;">
+            Comment m'inscrire à la bibliothèque ? <span>＋</span>
+          </summary>
+          <p style="margin-top:12px; color:var(--text-light); font-size:0.93rem;">L'inscription est gratuite pour les résidents de Paris. Présentez-vous à l'accueil avec une pièce d'identité et un justificatif de domicile de moins de 3 mois.</p>
+        </details>
+
+        <details style="background:var(--white); border-radius:8px; padding:18px 22px; border:1px solid var(--border);">
+          <summary style="font-weight:700; color:var(--blue); cursor:pointer; list-style:none; display:flex; justify-content:space-between;">
+            Puis-je renouveler un emprunt en ligne ? <span>＋</span>
+          </summary>
+          <p style="margin-top:12px; color:var(--text-light); font-size:0.93rem;">Oui, connectez-vous à votre espace adhérent sur notre portail en ligne. Chaque ouvrage peut être renouvelé jusqu'à 2 fois, sauf s'il est réservé par un autre membre.</p>
+        </details>
+
+        <details style="background:var(--white); border-radius:8px; padding:18px 22px; border:1px solid var(--border);">
+          <summary style="font-weight:700; color:var(--blue); cursor:pointer; list-style:none; display:flex; justify-content:space-between;">
+            Comment accéder aux ressources numériques ? <span>＋</span>
+          </summary>
+          <p style="margin-top:12px; color:var(--text-light); font-size:0.93rem;">Vos identifiants d'adhérent vous donnent accès à notre portail numérique 24h/24. Vous pouvez lire les e-books directement depuis votre navigateur ou les télécharger sur votre liseuse.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="icon">📍</span><span>12 Rue du Savoir, 75005 Paris</span></li>
+            <li><span class="icon">📞</span><span>+33 (0)1 23 45 67 89</span></li>
+            <li><span class="icon">✉️</span><span>contact@bibliohub.fr</span></li>
+            <li><span class="icon">🕐</span><span>Lun–Sam : 9h–20h</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

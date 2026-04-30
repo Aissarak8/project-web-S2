@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalogue — BiblioHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+        <span class="logo-icon">📚</span>
+        Biblio<span>Hub</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <h1>Notre Catalogue</h1>
+    <div class="gold-line"></div>
+    <p>Plus de 15 000 ouvrages à votre disposition — trouvez votre prochaine lecture.</p>
+  </header>
+
+  <!-- ── CATALOGUE SECTION ── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Search and filter controls -->
+      <div class="catalogue-controls">
+
+        <!-- Live search input -->
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="bookSearch"
+            placeholder="Rechercher par titre ou auteur…"
+            aria-label="Rechercher un livre"
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Category filter buttons -->
+        <div class="filter-buttons" role="group" aria-label="Filtrer par catégorie">
+          <button class="filter-btn active" data-category="tous">Tous</button>
+          <button class="filter-btn" data-category="littérature">Littérature</button>
+          <button class="filter-btn" data-category="sciences">Sciences</button>
+          <button class="filter-btn" data-category="informatique">Informatique</button>
+          <button class="filter-btn" data-category="histoire">Histoire</button>
+          <button class="filter-btn" data-category="philosophie">Philosophie</button>
+        </div>
+
+      </div>
+
+      <!-- Books grid — 12 cards, each with data-category for JS filtering -->
+      <div class="catalogue-grid">
+
+        <!-- 1 — Littérature -->
+        <article class="book-card" data-category="littérature">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Les Misérables.jfif" alt="Les Misérables" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Littérature</div>
+            <h3 class="book-title">Les Misérables</h3>
+            <p class="book-author">Victor Hugo</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 — Sciences -->
+        <article class="book-card" data-category="sciences">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Une brève histoire du temps.jpg" alt="Une brève histoire du temps" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Sciences</div>
+            <h3 class="book-title">Une brève histoire du temps</h3>
+            <p class="book-author">Stephen Hawking</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 — Informatique -->
+        <article class="book-card" data-category="informatique">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Clean Code.jfif" alt="Clean Code" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Informatique</div>
+            <h3 class="book-title">Clean Code</h3>
+            <p class="book-author">Robert C. Martin</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 — Histoire -->
+        <article class="book-card" data-category="histoire">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Sapiens.png" alt="Sapiens" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Histoire</div>
+            <h3 class="book-title">Sapiens</h3>
+            <p class="book-author">Yuval Noah Harari</p>
+            <div class="book-footer">
+              <span class="badge badge-reserved">Réservé</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 — Philosophie -->
+        <article class="book-card" data-category="philosophie">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Le Monde de Sophie.jfif" alt="Le Monde de Sophie" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Philosophie</div>
+            <h3 class="book-title">Le Monde de Sophie</h3>
+            <p class="book-author">Jostein Gaarder</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 — Littérature -->
+        <article class="book-card" data-category="littérature">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Le Nom de la Rose.jfif" alt="Le Nom de la Rose" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Littérature</div>
+            <h3 class="book-title">Le Nom de la Rose</h3>
+            <p class="book-author">Umberto Eco</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 — Sciences -->
+        <article class="book-card" data-category="sciences">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/La Mécanique Quantique.jfif" alt="La Mécanique Quantique" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Sciences</div>
+            <h3 class="book-title">La Mécanique Quantique</h3>
+            <p class="book-author">Michel Le Bellac</p>
+            <div class="book-footer">
+              <span class="badge badge-unavailable">Emprunté</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 — Informatique -->
+        <article class="book-card" data-category="informatique">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Intelligence Artificielle.jpg" alt="Intelligence Artificielle" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Informatique</div>
+            <h3 class="book-title">Intelligence Artificielle</h3>
+            <p class="book-author">Russell & Norvig</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 — Histoire -->
+        <article class="book-card" data-category="histoire">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/La Révolution Française.jfif" alt="La Révolution Française" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Histoire</div>
+            <h3 class="book-title">La Révolution Française</h3>
+            <p class="book-author">Jules Michelet</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 — Philosophie -->
+        <article class="book-card" data-category="philosophie">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Critique de la raison pure.jpg" alt="Critique de la raison pure" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Philosophie</div>
+            <h3 class="book-title">Critique de la raison pure</h3>
+            <p class="book-author">Emmanuel Kant</p>
+            <div class="book-footer">
+              <span class="badge badge-reserved">Réservé</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 11 — Littérature -->
+        <article class="book-card" data-category="littérature">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Vingt Mille Lieues sous les Mers.jpg" alt="Vingt Mille Lieues sous les Mers" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Littérature</div>
+            <h3 class="book-title">Vingt Mille Lieues sous les Mers</h3>
+            <p class="book-author">Jules Verne</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 12 — Informatique -->
+        <article class="book-card" data-category="informatique">
+          <div class="book-cover" aria-hidden="true" style="display: contents;"><img src="images/Python pour les Nuls.jpg" alt="Python pour les Nuls" height="450px"></div>
+          <div class="book-body">
+            <div class="book-category">Informatique</div>
+            <h3 class="book-title">Python pour les Nuls</h3>
+            <p class="book-author">Mark Lutz</p>
+            <div class="book-footer">
+              <span class="badge badge-available">Disponible</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /catalogue-grid -->
+
+      <!-- No results message (shown by JS when nothing matches) -->
+      <div id="noResults" class="no-results" style="display:none;" role="status" aria-live="polite">
+        <p>🔎 Aucun livre trouvé pour votre recherche. Essayez un autre terme.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="icon">📍</span><span>12 Rue du Savoir, 75005 Paris</span></li>
+            <li><span class="icon">📞</span><span>+33 (0)1 23 45 67 89</span></li>
+            <li><span class="icon">✉️</span><span>contact@bibliohub.fr</span></li>
+            <li><span class="icon">🕐</span><span>Lun–Sam : 9h–20h</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

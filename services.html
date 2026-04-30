@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — BiblioHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+        <span class="logo-icon">📚</span>
+        Biblio<span>Hub</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="catalogue.html">Catalogue</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="evenements.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <h1>Nos Services</h1>
+    <div class="gold-line"></div>
+    <p>Des services pensés pour accompagner votre parcours de savoir.</p>
+  </header>
+
+  <!-- ── SERVICES GRID ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-header">
+        <h2>Ce que nous offrons</h2>
+        <div class="gold-line"></div>
+        <p>BiblioHub met à votre disposition une gamme complète de services pour répondre à tous vos besoins.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Service 1 — Book Borrowing -->
+        <div class="service-card" >
+          <div class="service-image" aria-hidden="true"><img src="images/service/Emprunt de livres.jpeg" alt="Emprunt de livres"></div>
+          <div class="service-content">
+            <h3>Emprunt de livres</h3>
+            <p>Empruntez jusqu'à <strong>5 ouvrages simultanément</strong> pour une durée de <strong>3 semaines</strong>, renouvelable en ligne. Notre catalogue de plus de 15 000 titres couvre toutes les disciplines.</p>
+          </div>
+        </div>
+
+        <!-- Service 2 — Digital Resources -->
+        <div class="service-card">
+          <div class="service-image" aria-hidden="true"><img src="images/service/Ressources numériques.jpeg" alt="Ressources numériques"></div>
+          <div class="service-content">
+            <h3>Ressources numériques</h3>
+            <p>Accédez à notre bibliothèque numérique 24/7 : e-books, revues scientifiques, bases de données spécialisées et archives en ligne. Un monde de savoir à portée de clic.</p>
+          </div>
+        </div>
+
+        <!-- Service 3 — Study Rooms -->
+        <div class="service-card">
+          <div class="service-image" aria-hidden="true"><img src="images/service/Salles d'étude.jpeg" alt="Salles d'étude"></div>
+          <div class="service-content">
+            <h3>Salles d'étude</h3>
+            <p>Réservez l'une de nos <strong>8 salles de travail</strong> équipées d'un écran de projection, tableau blanc et connexion Wi-Fi haut débit. Idéales pour les groupes de 2 à 10 personnes.</p>
+          </div>
+        </div>
+
+        <!-- Service 4 — Scientific Printing -->
+        <div class="service-card">
+          <div class="service-image" aria-hidden="true"><img src="images/service/Impression scientifique.jpeg" alt="Impression scientifique"></div>
+          <div class="service-content">
+            <h3>Impression scientifique</h3>
+            <p>Imprimez vos documents, mémoires et thèses dans des formats professionnels. Service de <strong>reliure sur place</strong> disponible. Tarifs préférentiels pour les étudiants inscrits.</p>
+          </div>
+        </div>
+
+        <!-- Service 5 — Research Assistance -->
+        <div class="service-card">
+          <div class="service-image" aria-hidden="true"><img src="images/service/Assistance à la recherche.jpeg" alt="Assistance à la recherche"></div>
+          <div class="service-content">
+            <h3>Assistance à la recherche</h3>
+            <p>Nos bibliothécaires experts vous guident dans vos recherches documentaires. Aide à la <strong>rédaction de bibliographies</strong>, sélection de sources et formation aux outils de recherche.</p>
+          </div>
+        </div>
+
+        <!-- Service 6 — Training Workshops -->
+        <div class="service-card">
+          <div class="service-image" aria-hidden="true"><img src="images/service/Ateliers de formation.jpeg" alt="Ateliers de formation"></div>
+          <div class="service-content">
+            <h3>Ateliers de formation</h3>
+            <p>Participez à nos <strong>ateliers mensuels</strong> gratuits : initiation aux bases de données, gestion des références bibliographiques (Zotero), lecture rapide et bien plus encore.</p>
+          </div>
+        </div>
+
+      </div><!-- /services-grid -->
+
+    </div>
+  </section>
+
+  <!-- ── OPENING HOURS TABLE ── -->
+  <section class="section" style="background: var(--off-white);">
+    <div class="container">
+      <div class="hours-section">
+        <h2>🕐 Horaires d'ouverture</h2>
+
+        <table class="hours-table" aria-label="Horaires d'ouverture de la bibliothèque">
+          <thead>
+            <tr>
+              <th scope="col">Jour</th>
+              <th scope="col">Matin</th>
+              <th scope="col">Après-midi</th>
+              <th scope="col">Statut</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Lundi</strong></td>
+              <td>8h00 – 12h30</td>
+              <td>12h30 – 19h00</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Mardi</strong></td>
+              <td>8h00 – 12h30</td>
+              <td>12h30 – 19h00</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Mercredi</strong></td>
+              <td>8h00 – 12h30</td>
+              <td>12h30 – 19h00</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Jeudi</strong></td>
+              <td>8h00 – 12h30</td>
+              <td>12h30 – 19h00</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Vendredi</strong></td>
+              <td>8h00 – 12h30</td>
+              <td>12h30 – 19h00</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Samedi</strong></td>
+              <td>8h00 – 12h00</td>
+              <td>—</td>
+              <td><span class="hours-open">Ouvert</span></td>
+            </tr>
+            <tr>
+              <td><strong>Dimanche</strong></td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="hours-closed">Fermé</span></td>
+            </tr>
+            <tr>
+              <td><strong>Jours fériés</strong></td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="hours-closed">Fermé</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="text-align:center; margin-top:22px; color:var(--text-light); font-size:0.9rem;">
+          📞 Pour toute question, contactez-nous au <strong>+212 (0)5 24 43 46 49</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="icon">📍</span><span>JXXM+JRM، شارع مولاي عبد الله، مراكش 40000</span></li>
+            <li><span class="icon">📞</span><span>+212 (0)5 24 43 46 49</span></li>
+            <li><span class="icon">✉️</span><span>contact@bibliohub.fr</span></li>
+            <li><span class="icon">🕐</span><span>Lun–Sam : 8h–19h</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
