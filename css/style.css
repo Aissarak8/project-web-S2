@@ -515,10 +515,8 @@ img { max-width: 100%; display: block; }
 }
 
 .book-cover {
-  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
-  padding: 40px 0;
-  text-align: center;
-  font-size: 4rem;
+  padding: 0;
+  width: 100%;
   position: relative;
 }
 
