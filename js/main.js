@@ -239,7 +239,7 @@ function initContactForm() {
     }
   });
 
-  /* Live inline validation on blur */
+  /* Live inline validation  blur */
   form.querySelectorAll('input, select, textarea').forEach(field => {
     field.addEventListener('blur', () => validateField(field));
     field.addEventListener('input', () => clearError(field));
