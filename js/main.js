@@ -229,7 +229,7 @@ function initCatalogueFilters() {
    6. CONTACT FORM VALIDATION
    ============================================================ */
 function initContactForm() {
-  const form = document.getElementById('contactForm' && 'reservForm');
+  const form = document.getElementById('contactForm') || document.getElementById('reservForm');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
@@ -268,7 +268,7 @@ function validateField(field) {
 
   /* Email format */
   if (field.type === 'email' && value) {
-    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRx = /^[^\s@]+@uca\.ac\.ma$/;
     if (!emailRx.test(value)) {
       showError(field, 'Veuillez saisir une adresse e-mail valide.');
       return false;
