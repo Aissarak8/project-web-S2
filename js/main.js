@@ -229,7 +229,7 @@ function initCatalogueFilters() {
    6. CONTACT FORM VALIDATION
    ============================================================ */
 function initContactForm() {
-  const form = document.getElementById('contactForm');
+  const form = document.getElementById('contactForm' && 'reservForm');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {

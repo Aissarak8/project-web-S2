@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiblioHub — Votre Bibliothèque Moderne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo" aria-label="BiblioHub — Accueil">
+                <span class="logo-icon">📚</span>
+                Biblio<span>Hub</span>
+            </a>
+
+            <!-- Hamburger (mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation links -->
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ── PAGE HEADER ── -->
+    <header class="page-header">
+        <h1>Reserver votre place</h1>
+        <div class="gold-line"></div>
+        <p>Plus de 200 tables disponibles — Trouvez votre endroit préféré.</p>
+    </header>
+
+    <!-- ── RESERVATION SECTION ── -->
+    <section class="section">
+        
+        <div class="reservation-container">
+            <!-- Form de reservation-->
+            <div class="reservation-form-card">
+                <h2>Réservez une Table</h2>
+                <p>Remplissez le formulaire ci-dessous pour réserver une table pour vous et vos amis.</p>
+
+                <form id="reservForm" novalidate>
+
+                    <!-- Name row: Nom + Prénom -->
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="nom">Nom <span>*</span></label>
+                            <input
+                            type="text"
+                            id="nom"
+                            name="nom"
+                            placeholder="Votre nom"
+                            data-required="true"
+                            autocomplete="family-name"
+                            />
+                            <span class="field-error" id="nomError" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span>*</span></label>
+                            <input
+                            type="text"
+                            id="prenom"
+                            name="prenom"
+                            placeholder="Votre prénom"
+                            data-required="true"
+                            autocomplete="given-name"
+                            />
+                            <span class="field-error" id="prenomError" role="alert"></span>
+                        </div>
+
+                    </div><!-- /form-row -->
+
+                    <!-- Email -->
+                    <div class="form-group">
+                    <label for="email">Adresse e-mail <span>*</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="votre@uca.ac.ma"
+                        data-required="true"
+                        autocomplete="email"
+                    />
+                    <span class="field-error" id="emailError" role="alert"></span>
+                    </div>
+
+                    <!-- Num-personnes select -->
+                    <div class="form-group">
+                    <label for="Num-personnes">Nombre de personnes <span>*</span></label>
+                    <select id="Num-personnes" name="Num-personnes" data-required="true">
+                        <option value="">— Choisissez le nombre de personnes —</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <span class="field-error" id="sujetError" role="alert"></span>
+                    </div>
+
+                    <!-- Select de la zone -->
+                    <div class="form-group">
+                        <label for="biblio-zone">Zone de la bibliothèque </label>
+                        <select name="biblio-zone" id="biblio-zone" data-required="true">
+                        <option value="">— Choisissez une zone —</option>
+                        <option value="A">Zone A</option>
+                        <option value="B">Zone B</option>
+                        <option value="C">Zone C</option>
+                        </select>
+                    </div>
+
+                    <!-- Choisir le bon moment — etrer la date est le time -->
+                    <div class="form-group">
+                    <label for="Heure">Heure <span>*</span></label>
+                    <input
+                        type="time"
+                        name="Heure" id="Heure" 
+                        data-required="true"
+                        />
+                    <span class="field-error" id="messageError" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input 
+                        type="date" 
+                        name="date" id="date" 
+                        data-required="true">
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="form-submit">
+                    <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center; display:flex;">
+                        Réservez maintenant ✉️
+                    </button>
+                    </div>
+
+                </form>
+
+                <!-- Success reservation (shown by JS after valid submission) -->
+                <div class="success-message" id="successMessage" role="status" aria-live="polite">
+                    ✅ Merci ! Votre reservation a bien été enregistrée.
+                </div>
+
+            </div>
+
+            <!-- CARD INFO -->
+            <div class="zones-card">
+                <h3>Zones disponibles</h3>
+
+                <ul class="zones-list">
+                <li>
+                    <span class="dot"></span>
+                    <div>
+                    <strong>Zone A</strong>
+                    <p>Espace calme pour lecture individuelle</p>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="dot"></span>
+                    <div>
+                    <strong>Zone B</strong>
+                    <p>Idéale pour travail en groupe (2-6 personnes)</p>
+                    </div>
+                </li>
+
+                <li>
+                    <span class="dot"></span>
+                    <div>
+                    <strong>Zone C</strong>
+                    <p>Zone premium avec confort et silence total</p>
+                    </div>
+                </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:14px;">
+            <span class="logo-icon">📚</span> Biblio<span>Hub</span>
+          </div>
+          <p>BiblioHub est votre espace de savoir, d'échange et de découverte. Nous mettons à votre disposition une collection riche et diversifiée pour nourrir votre curiosité.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="evenements.html">Événements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Emprunt de livres</a></li>
+            <li><a href="services.html">Ressources numériques</a></li>
+            <li><a href="services.html">Salles d'étude</a></li>
+            <li><a href="services.html">Impression scientifique</a></li>
+            <li><a href="services.html">Ateliers de formation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li><span class="icon">📍</span><span>JXXM+JRM، شارع مولاي عبد الله، مراكش 4000</span></li>
+            <li><span class="icon">📞</span><span>+212 (0)5 24 43 46 49</span></li>
+            <li><span class="icon">✉️</span><span>contact@fssm.ma</span></li>
+            <li><span class="icon">🕐</span><span>Lun–Sam : 8h–19h</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 BiblioHub. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTop" aria-label="Retour en haut">&#8679;</button>
+  <script src="js/main.js"></script>
+
+
+</body>
+</html>

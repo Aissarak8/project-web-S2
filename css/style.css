@@ -813,6 +813,89 @@ img { max-width: 100%; display: block; }
 .hours-closed { color: #721c24; font-weight: 700; }
 
 /* ============================================================
+   RESERVATION PAGE
+   ============================================================ */
+
+.reservation-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 50px;
+  align-items: start;
+  margin: 10px 34px;
+}
+
+.reservation-form-card {
+  background-color: var(--off-white);
+  padding: 24px 28px;
+  border-radius: var(--radius);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+
+.reservation-form-card h2 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+.reservation-form-card > p {
+  color: rgba(45,45,45,0.65);
+  font-size: 0.93rem;
+  margin-bottom: 32px;
+}
+.zones-card {
+  background: var(--blue);
+  border-radius: var(--radius);
+  padding: 44px 36px;
+  color: var(--white);
+}
+
+.zones-card h3 {
+  margin-bottom: 20px;
+  color: var(--gold-dark);
+}
+
+/* LIST */
+.zones-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid var(--gold);
+}
+
+/* ITEM */
+.zones-list li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* DOT */
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 10px;
+}
+
+/* HEADER */
+.zones-list strong {
+  margin-left: -2px;
+  color: var(--white);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* TEXT */
+.zones-list p {
+  margin: 5px 5px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* ============================================================
    EVENTS PAGE
    ============================================================ */
 .events-grid {
