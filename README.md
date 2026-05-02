@@ -27,12 +27,12 @@ cd project-web-S2
 # ouvrir index.html dans le navigateur
 ```
 
-## 👩‍💻 Équipe
+## Équipe
 
 | Rôle | Contribution |
 |---|---|
 | **AISSA SLIKOU** | Architecture globale · Structure HTML · CSS complet · GitHub Pages |
-| **FATIMA ZAHRA IRHIRANE ** | Contenu éditorial · JavaScript interactif · Responsive · Tests |
+| **FATIMA ZAHRA IRHIRANE** | Contenu éditorial · JavaScript interactif · Responsive · Tests |
 
 ---
 
