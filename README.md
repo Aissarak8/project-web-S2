@@ -1,4 +1,4 @@
-# BiblioHub
+# Biblio FSSM
 
 Site web d'une bibliothèque universitaire — projet front-end S2.
 
@@ -31,8 +31,8 @@ cd project-web-S2
 
 | Rôle | Contribution |
 |---|---|
-| **Aissarak8** | Architecture globale · Structure HTML · CSS complet · GitHub Pages |
-| **Collègue** | Contenu éditorial · JavaScript interactif · Responsive · Tests |
+| **AISSA SLIKOU** | Architecture globale · Structure HTML · CSS complet · GitHub Pages |
+| **FATIMA ZAHRA IRHIRANE ** | Contenu éditorial · JavaScript interactif · Responsive · Tests |
 
 ---
 
