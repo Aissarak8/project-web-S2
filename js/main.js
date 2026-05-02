@@ -229,7 +229,8 @@ function initCatalogueFilters() {
    6. CONTACT FORM VALIDATION
    ============================================================ */
 function initContactForm() {
-  const form = document.getElementById('contactForm') || document.getElementById('reservForm');  if (!form) return;
+  const form = document.getElementById('contactForm') || document.getElementById('reservForm');
+    if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -238,7 +239,7 @@ function initContactForm() {
     }
   });
 
-  /* Live inline validation on blur */
+  /* Live inline validation  blur */
   form.querySelectorAll('input, select, textarea').forEach(field => {
     field.addEventListener('blur', () => validateField(field));
     field.addEventListener('input', () => clearError(field));
